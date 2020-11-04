@@ -1,0 +1,14 @@
+<resources>
+    <!-- Night mode Preference -->
+    <string-array name="night_mode_entries">
+        <item>System</item>
+        <item>Off</item>
+        <item>On</item>
+    </string-array>
+
+    <string-array name="night_mode_values">
+        <item>system</item>
+        <item>off</item>
+        <item>on</item>
+    </string-array>
+</resources>

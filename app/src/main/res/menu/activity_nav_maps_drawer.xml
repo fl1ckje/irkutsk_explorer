@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group
+        android:id="@+id/nav_menu_top"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_city_info"
+            android:checkable="false"
+            android:icon="@drawable/ic_nav_bar_city_info"
+            android:title="@string/nav_city_info_title" />
+        <item
+            android:id="@+id/nav_places"
+            android:checkable="false"
+            android:icon="@drawable/ic_nav_bar_places"
+            android:title="@string/nav_places_title" />
+        <item
+            android:id="@+id/nav_favourites"
+            android:checkable="false"
+            android:icon="@drawable/ic_nav_bar_favourites"
+            android:title="@string/nav_favourites_title" />
+    </group>
+    <group
+        android:id="@+id/nav_menu_bottom"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_settings"
+            android:checkable="false"
+            android:icon="@drawable/ic_nav_bar_settings"
+            android:title="@string/nav_settings_title" />
+        <item
+            android:id="@+id/nav_about"
+            android:checkable="false"
+            android:icon="@drawable/ic_nav_bar_about"
+            android:title="@string/nav_city_info_title" />
+    </group>
+</menu>
