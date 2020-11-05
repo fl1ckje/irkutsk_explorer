@@ -1,17 +1,21 @@
 package com.fl1ckjedev.irkutskexplorer;
 
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.location.Location;
 import android.location.LocationListener;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -76,29 +80,19 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        String message;
         switch (item.getItemId()) {
             case R.id.nav_city_info:
-                message = "City Info";
                 break;
             case R.id.nav_places:
-                message = "Places";
                 break;
             case R.id.nav_favourites:
-                message = "Favourites";
                 break;
             case R.id.nav_settings:
-                startActivity(new Intent(this, SettingsActivity.class));
-                message = "Settings";
+                startActivity(new Intent(MainActivity.this, SettingsActivity.class));
                 break;
             case R.id.nav_about:
-                message = "About";
                 break;
-            default:
-                return false;
         }
-        Log.d("DEBUG: ", message);
-        @SuppressLint("ShowToast") Toast toast = Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG);
         mDrawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }

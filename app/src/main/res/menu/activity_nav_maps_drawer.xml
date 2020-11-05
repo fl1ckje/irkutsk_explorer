@@ -33,6 +33,6 @@
             android:id="@+id/nav_about"
             android:checkable="false"
             android:icon="@drawable/ic_nav_bar_about"
-            android:title="@string/nav_city_info_title" />
+            android:title="@string/nav_about_title" />
     </group>
 </menu>

@@ -12,18 +12,13 @@
 
     <application
         android:allowBackup="false"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IrkutskExplorer">
-        <activity
-            android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.fl1ckjedev.irkutskexplorer.MainActivity" />
-        </activity>
+
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="portrait"
@@ -34,6 +29,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_maps"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IrkutskExplorer.NoActionBar" />
+
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:theme="@style/Theme.IrkutskExplorer">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fl1ckjedev.irkutskexplorer.MainActivity" />
+        </activity>
+
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -46,11 +58,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/title_activity_maps"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.IrkutskExplorer.NoActionBar" />
+
     </application>
 
 </manifest>
