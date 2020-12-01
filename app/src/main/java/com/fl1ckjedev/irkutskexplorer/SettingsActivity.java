@@ -1,7 +1,9 @@
 package com.fl1ckjedev.irkutskexplorer;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -27,12 +29,9 @@ public class SettingsActivity extends AppCompatActivity implements
             setTitle(savedInstanceState.getCharSequence(TITLE_TAG));
         }
         getSupportFragmentManager().addOnBackStackChangedListener(
-                new FragmentManager.OnBackStackChangedListener() {
-                    @Override
-                    public void onBackStackChanged() {
-                        if (getSupportFragmentManager().getBackStackEntryCount() == 0) {
-                            setTitle(R.string.title_activity_settings);
-                        }
+                () -> {
+                    if (getSupportFragmentManager().getBackStackEntryCount() == 0) {
+                        setTitle(R.string.title_activity_settings);
                     }
                 });
         ActionBar actionBar = getSupportActionBar();
@@ -42,7 +41,7 @@ public class SettingsActivity extends AppCompatActivity implements
     }
 
     @Override
-    public void onSaveInstanceState(Bundle outState) {
+    public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         // Save current activity title so we can set it again after a configuration change
         outState.putCharSequence(TITLE_TAG, getTitle());
@@ -86,7 +85,7 @@ public class SettingsActivity extends AppCompatActivity implements
 
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-            setPreferencesFromResource(R.xml.theme_preferences, rootKey);
+            setPreferencesFromResource(R.xml.appearance_preferences, rootKey);
         }
     }
 
@@ -101,5 +100,10 @@ public class SettingsActivity extends AppCompatActivity implements
     @Override
     protected void onDestroy() {
         super.onDestroy();
+    }
+
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        setResult(3);
     }
 }

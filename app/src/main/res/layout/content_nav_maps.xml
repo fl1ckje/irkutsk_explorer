@@ -13,8 +13,208 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="FragmentTagUsage" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="top"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/markers_visibility_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:background="@color/black_semi_transparent"
+            android:clickable="true"
+            android:focusable="true"
+            app:backgroundTint="@color/black_semi_transparent"
+            app:elevation="0dp"
+            app:fabCustomSize="@dimen/fab_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:pressedTranslationZ="0dp"
+            app:srcCompat="@drawable/ic_fab_markers_visibility"
+            app:tint="@color/white"
+            tools:ignore="ContentDescription" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/markers_visibility_all_visible_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:background="@color/black_semi_transparent"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="invisible"
+            app:backgroundTint="@color/black_semi_transparent"
+            app:elevation="0dp"
+            app:fabCustomSize="@dimen/fab_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/markers_visibility_fab"
+            app:pressedTranslationZ="0dp"
+            app:tint="@color/white"
+            app:srcCompat="@drawable/ic_fab_markers_all_visible"
+
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/fab_label_all_markers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:background="@color/black_semi_transparent"
+            android:padding="8dp"
+            android:text="@string/all_markers_fab_label"
+            android:textColor="@color/white"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/markers_visibility_all_visible_fab"
+            app:layout_constraintStart_toEndOf="@+id/markers_visibility_all_visible_fab"
+            app:layout_constraintTop_toTopOf="@+id/markers_visibility_all_visible_fab" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/markers_visibility_no_visible_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:background="@color/black_semi_transparent"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="invisible"
+            app:backgroundTint="@color/black_semi_transparent"
+            app:elevation="0dp"
+            app:fabCustomSize="@dimen/fab_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/markers_visibility_all_visible_fab"
+            app:pressedTranslationZ="0dp"
+            app:srcCompat="@drawable/ic_fab_no_visible"
+            app:tint="@color/white"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/fab_label_no_markers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:background="@color/black_semi_transparent"
+            android:padding="8dp"
+            android:text="@string/no_markers_fab_label"
+            android:textColor="@color/white"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/markers_visibility_no_visible_fab"
+            app:layout_constraintStart_toEndOf="@+id/markers_visibility_no_visible_fab"
+            app:layout_constraintTop_toTopOf="@+id/markers_visibility_no_visible_fab" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/markers_visibility_only_favorite_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:background="@color/black_semi_transparent"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="invisible"
+            app:backgroundTint="@color/black_semi_transparent"
+            app:elevation="0dp"
+            app:fabCustomSize="@dimen/fab_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/markers_visibility_no_visible_fab"
+            app:pressedTranslationZ="0dp"
+            app:srcCompat="@drawable/ic_fab_markers_favorite"
+            app:tint="@color/white"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/fab_label_only_favorite_markers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:background="@color/black_semi_transparent"
+            android:padding="8dp"
+            android:text="@string/only_favorites_fab_label"
+            android:textColor="@color/white"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/markers_visibility_only_favorite_fab"
+            app:layout_constraintStart_toEndOf="@+id/markers_visibility_only_favorite_fab"
+            app:layout_constraintTop_toTopOf="@+id/markers_visibility_only_favorite_fab" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="top"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/zoom_in_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:background="@color/black_semi_transparent"
+            android:clickable="true"
+            android:focusable="true"
+            app:backgroundTint="@color/black_semi_transparent"
+            app:elevation="0dp"
+            app:fabCustomSize="@dimen/fab_size"
+            app:pressedTranslationZ="0dp"
+            app:srcCompat="@drawable/ic_fab_zoom_in"
+            app:tint="@color/white"
+            tools:ignore="ContentDescription" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/zoom_out_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:clickable="true"
+            android:focusable="true"
+            app:backgroundTint="@color/black_semi_transparent"
+            app:elevation="0dp"
+            app:fabCustomSize="@dimen/fab_size"
+            app:pressedTranslationZ="0dp"
+            app:srcCompat="@drawable/ic_fab_zoom_out"
+            app:tint="@color/white"
+            tools:ignore="ContentDescription" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/my_location_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:clickable="true"
+            android:focusable="true"
+            app:backgroundTint="@color/black_semi_transparent"
+            app:elevation="0dp"
+            app:fabCustomSize="48dp"
+            app:pressedTranslationZ="0dp"
+            app:srcCompat="@drawable/ic_fab_my_location"
+            app:tint="@color/white"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

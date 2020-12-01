@@ -4,7 +4,7 @@
         app:fragment="com.fl1ckjedev.irkutskexplorer.SettingsActivity$MessagesFragment"
         app:icon="@drawable/ic_theme_settings"
         app:key="theme_header"
-        app:title="@string/theme_settings_header" />
+        app:title="@string/appearance_settings_header" />
 
     <Preference
         app:fragment="com.fl1ckjedev.irkutskexplorer.SettingsActivity$SyncFragment"

@@ -1,9 +1,9 @@
 <resources>
     <!-- Night mode Preference -->
     <string-array name="night_mode_entries">
-        <item>System</item>
-        <item>Off</item>
-        <item>On</item>
+        <item>@string/night_mode_system</item>
+        <item>@string/night_mode_off</item>
+        <item>@string/night_mode_on</item>
     </string-array>
 
     <string-array name="night_mode_values">

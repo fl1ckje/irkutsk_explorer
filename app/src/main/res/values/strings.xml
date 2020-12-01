@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">Irkutsk Explorer</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="app_name" translatable="false">Irkutsk Explorer</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
     <string name="title_activity_maps">Map</string>
-    <string name="nav_drawer_secondary_title">Java edition</string>
-    <string name="nav_drawer_primary_title">Irkutsk Explorer</string>
+    <string name="nav_drawer_secondary_title" translatable="false">Java edition</string>
+    <string name="nav_drawer_primary_title" translatable="false">Irkutsk Explorer</string>
     <string name="nav_city_info_title">City information</string>
     <string name="nav_places_title">Places</string>
     <string name="nav_favourites_title">Favourites</string>
@@ -12,21 +12,31 @@
     <string name="title_activity_settings">Settings</string>
 
     <!-- Preference Titles -->
-    <string name="theme_settings_header">Theme</string>
-    <string name="sync_header">Sync</string>
+    <string name="appearance_settings_header">Appearance</string>
+    <string name="sync_header" translatable="false">Sync</string>
 
     <!-- Messages Preferences -->
-    <string name="signature_title">Your signature</string>
+    <string name="signature_title" translatable="false">Your signature</string>
     <string name="night_mode_title">Night mode</string>
     <string name="night_mode_system">System</string>
     <string name="night_mode_off">Off</string>
     <string name="night_mode_on">On</string>
 
     <!-- Sync Preferences -->
-    <string name="sync_title">Sync email periodically</string>
-    <string name="attachment_title">Download incoming attachments</string>
-    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    <string name="sync_title" translatable="false">Sync email periodically</string>
+    <string name="attachment_title" translatable="false">Download incoming attachments</string>
+    <string name="attachment_summary_on" translatable="false">Automatically download attachments for incoming emails
     </string>
-    <string name="attachment_summary_off">Only download attachments when manually requested</string>
-    <string name="nav_about_title">About</string>
+    <string name="attachment_summary_off" translatable="false">Only download attachments when manually requested</string>
+    <string name="nav_about_title">About the program</string>
+    <string name="only_favorites_fab_label">Only favorites</string>
+    <string name="no_markers_fab_label">None</string>
+    <string name="all_markers_fab_label">All places</string>
+    <string name="open_location_settings_dialog_title">Open location settings?</string>
+    <string name="open_location_settings_dialog_message">Please enable GPS, Wifi, and mobile network positioning to see your location on the map.</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="title_place_list">Places</string>
+    <string name="title_place_detail">Details about the place</string>
+    <string name="place_search_hint">Name, type or address</string>
 </resources>

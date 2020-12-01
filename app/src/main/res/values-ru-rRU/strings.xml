@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_activity_maps">Карта</string>
+    <string name="nav_city_info_title">Информация о городе</string>
+    <string name="open_location_settings_dialog_message">Пожалуйста, включите позиционирование по GPS, Wifi и мобильным сетям, чтобы увидеть ваше местоположение на карте.</string>
+    <string name="all_markers_fab_label">Все места</string>
+    <string name="no_markers_fab_label">Никакие</string>
+    <string name="only_favorites_fab_label">Только избранные</string>
+    <string name="nav_about_title">О программе</string>
+    <string name="night_mode_on">Включен</string>
+    <string name="night_mode_off">Выключен</string>
+    <string name="night_mode_system">Системный</string>
+    <string name="night_mode_title">Ночной режим</string>
+    <string name="appearance_settings_header">Внешний вид</string>
+    <string name="nav_places_title">Места</string>
+    <string name="nav_favourites_title">Избранное</string>
+    <string name="nav_settings_title">Настройки</string>
+    <string name="title_activity_settings">Настройки</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="open_location_settings_dialog_title">Открыть настройки определения местоположения?</string>
+    <string name="title_place_list">Места</string>
+    <string name="title_place_detail">Подробности о месте</string>
+    <string name="place_search_hint">Название, тип или адрес</string>
+</resources>
